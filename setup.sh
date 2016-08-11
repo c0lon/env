@@ -45,11 +45,8 @@ echo
 
 # setup vim
 echo "setting up vim..."
-cp -r $REPO_DIR/vim $INSTALL_DIR/.vim
-ln -s .vim/vimrc $INSTALL_DIR/.vimrc
-
-#ln -s $REPO_DIR/vim $INSTALL_DIR/.vim
-#ln -s $REPO_DIR/vimrc $INSTALL_DIR/.vimrc
+ln -s $REPO_DIR/vim $INSTALL_DIR/.vim
+ln -s $REPO_DIR/vimrc $INSTALL_DIR/.vimrc
 echo "done"
 echo
 
@@ -65,7 +62,7 @@ echo "setting up pyenv..."
 PYENV_DIR=$INSTALL_DIR/.pyenv
 git clone https://github.com/yyuu/pyenv.git $PYENV_DIR
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $PROFILE
-echo 'export PATH="$PYENV_ROOT/BIN:$PATH"' >> $PROFILE
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> $PROFILE
 echo 'eval "$(pyenv init -)"' >> $PROFILE
 echo
 
