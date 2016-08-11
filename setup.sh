@@ -45,8 +45,8 @@ echo
 
 # setup vim
 echo "setting up vim..."
-ln -s $REPO_DIR/vim $INSTALL_DIR/.vim
-ln -s $REPO_DIR/vimrc $INSTALL_DIR/.vimrc
+cp -r $REPO_DIR/vim $INSTALL_DIR/.vim
+ln -s $INSTALL_DIR/.vim/vimrc $INSTALL_DIR/.vimrc
 echo "done"
 echo
 
