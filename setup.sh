@@ -7,8 +7,7 @@
 
 # set install directory
 # ~ by default
-#INSTALL_DIR=~
-INSTALL_DIR=.
+INSTALL_DIR=~
 if [ ! -z "$1" ]
 then
     INSTALL_DIR=$1
@@ -45,15 +44,18 @@ echo
 
 # setup vim
 echo "setting up vim..."
-cp -r $REPO_DIR/vim $INSTALL_DIR/.vim
-ln -s $INSTALL_DIR/.vim/vimrc $INSTALL_DIR/.vimrc
+mkdir $INSTALL_DIR/.vim
+mkdir $INSTALL_DIR/.vim/autoload
+mkdir $INSTALL_DIR/.vim/bundle
+curl -LSso $INSTALL_DIR/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cp $REPO_DIR/vimrc $INSTALL_DIR/.vimrc
+git clone https://github.com/scrooloose/nerdtree.git $INSTALL_DIR/.vim/bundle/nerdtree
 echo "done"
 echo
 
 # setup tmux
 echo "setting up tmux..."
 cp $REPO_DIR/tmux.conf $INSTALL_DIR/.tmux.conf
-#ln -s $REPO_DIR/tmux.conf $INSTALL_DIR/.tmux.conf
 echo "done"
 echo
 
