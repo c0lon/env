@@ -36,6 +36,12 @@ echo "    PROFILE: $PROFILE"
 echo "   REPO_DIR: $REPO_DIR"
 echo
 
+# set terminal prompt
+echo "setting terminal prompt..."
+echo "PS1=\"\[\033[1;34m\]\u\[\033[1;36m\]@\[\033[1;35m\]\W\[\033[1;32m\] $ \[\033[0m\]\"" >> $PROFILE
+echo "done"
+echo
+
 # clone the repo
 echo "cloning repository..."
 git clone https://github.com/c0lon/denv $REPO_DIR
