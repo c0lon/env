@@ -101,5 +101,9 @@ map <Right> :vertical resize +1<CR>
 set splitbelow
 set splitright
 
+" refresh file + jump to last line
+" for log files
+map K :e<Return>G
+
 " nerdtree
 nmap <silent> <C-N> :NERDTreeToggle<CR>
