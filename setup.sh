@@ -1,5 +1,6 @@
 #!/bin/bash
 # setup my development environment
+# MUST BE RUN INSIDE THE REPO DIRECTORY
 #
 # sets up vim
 # sets up tmux
@@ -9,11 +10,11 @@
 # figure out relative symbolic links
 
 # vim
-#ln -s ./vim $HOME/.vim
-#ln -s ./vim/vimrc $HOME/.vimrc
+ln -s $PWD/vim $HOME/.vim
+ln -s $PWD/vim/vimrc $HOME/.vimrc
 
 # tmux
-#ln -s tmux.conf $HOME/.tmux.conf
+ln -s $PWD/tmux.conf $HOME/.tmux.conf
 
 # pyenv
 # git clone https://github.com/yyuu/pyenv.git ~/.pyenv
