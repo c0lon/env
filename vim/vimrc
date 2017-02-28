@@ -54,6 +54,7 @@ set foldcolumn=1
 
 " make it look purdy
 syntax enable
+set t_Co=256
 colorscheme CandyPaper
 set background=dark
 
