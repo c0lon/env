@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 set encoding=utf-8
 set ffs=unix,dos,mac
 
