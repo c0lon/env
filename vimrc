@@ -2,6 +2,13 @@ execute pathogen#infect()
 set encoding=utf-8
 set ffs=unix,dos,mac
 
+" set leader to SPACE
+"nnoremap <Space> <Nop>
+"let mapleader=" "
+
+" map jj to ESC
+"inoremap jj <ESC>
+
 " how many commands vim should remember
 set history=500
 
@@ -26,6 +33,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+nmap X :noh<Return>
 
 " regexes are magic
 set magic
@@ -45,7 +53,7 @@ set foldcolumn=1
 
 " make it look purdy
 syntax enable
-colorscheme darkblue
+colorscheme CandyPaper
 set background=dark
 
 " no backups/swap files
@@ -72,7 +80,7 @@ set wrap
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
-set foldlevel=1
+set foldlevel=99
 
 " treat long lines as break lines
 map j gj
