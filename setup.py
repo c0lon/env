@@ -10,6 +10,8 @@ def install(install_dir):
     Setup pyenv + pyenv-virtualenv
     '''
 
+    install_dir = os.path.realpath(install_dir)
+
     repo_dir = os.path.dirname(os.path.realpath(__file__))
     vim_dir_path = os.path.join(repo_dir, 'vim')
     vimrc_path = os.path.join(vim_dir_path, 'vimrc')
@@ -35,6 +37,6 @@ if __name__ == '__main__':
         help='specify the install directory')
     args = arg_parser.parse_args()
 
-    install_dir = os.path.realpath(args.install_dir) or os.environ['HOME']
+    install_dir = args.install_dir or os.environ['HOME']
     install(install_dir)
 
