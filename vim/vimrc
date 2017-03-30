@@ -50,6 +50,7 @@ set tm=500
 set foldcolumn=1
 
 " make it look purdy
+set t_Co=256
 syntax enable
 "colorscheme CandyPaper
 "colorscheme slate
