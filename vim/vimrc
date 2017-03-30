@@ -3,12 +3,9 @@ execute pathogen#infect()
 set encoding=utf-8
 set ffs=unix,dos,mac
 
-" set leader to SPACE
-"nnoremap <Space> <Nop>
-"let mapleader=" "
-
-" map jj to ESC
-"inoremap jj <ESC>
+" custom commands
+:command Tests :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
+:command Skiptests :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
 
 " how many commands vim should remember
 set history=500
@@ -54,7 +51,10 @@ set foldcolumn=1
 
 " make it look purdy
 syntax enable
-colorscheme CandyPaper
+"colorscheme CandyPaper
+"colorscheme slate
+"colorscheme triplejelly
+colorscheme tropikos
 set background=dark
 
 " no backups/swap files
@@ -67,10 +67,13 @@ set number
 set relativenumber
 
 " tab stuff
-set expandtab
-set smarttab
-set shiftwidth=4
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+"set textwidth=79
+set autoindent
+set fileformat=unix
 
 " indent stuff
 set ai
