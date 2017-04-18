@@ -9,6 +9,7 @@ VIM_DIR_PATH = os.path.join(REPO_DIR, 'vim')
 VIMRC_PATH = os.path.join(VIM_DIR_PATH, 'vimrc')
 TMUX_PATH = os.path.join(REPO_DIR, 'tmux.conf')
 
+VUNDLE_REPO = 'https://github.com/VundleVim.vim.git'
 PYENV_REPO = 'https://github.com/yyuu/pyenv.git'
 PYENV_VIRTUALENV_REPO = 'https://github.com/yyuu/pyenv-virtualenv.git'
 
@@ -18,6 +19,10 @@ def install(install_dir, shell_file):
     Install .tmux.conf
     Setup pyenv + pyenv-virtualenv
     '''
+
+    if not os.path.isdir(install_dir):
+        print('install directory %s does not exist. exiting' % install_dir)
+        import sys; sys.exit(1)
 
     install_dir = os.path.realpath(install_dir)
     shell_file = os.path.join(install_dir, shell_file)
@@ -40,6 +45,11 @@ def install(install_dir, shell_file):
 
     vimrc_target = os.path.join(install_dir, '.vimrc')
     os.system('ln -s %s %s' % (VIMRC_PATH, vimrc_target))
+
+    # vundle
+    vundle_target = os.path.join(vim_dir_target, 'bundle', 'Vundle.vim')
+    if not os.path.exists(vundle_target):
+        os.system('git clone %s %s' % (VUNDLE_REPO, vundle_target))
 
     # tmux
     tmux_target = os.path.join(install_dir, '.tmux.conf')

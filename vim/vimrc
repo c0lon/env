@@ -1,4 +1,14 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
 
 set encoding=utf-8
 set ffs=unix,dos,mac
@@ -11,8 +21,7 @@ set ffs=unix,dos,mac
 set history=500
 
 " filetype plugins
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " refresh a file automatically when it changes outside of vim
 set autoread
