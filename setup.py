@@ -2,6 +2,7 @@
 from argparse import ArgumentParser
 from datetime import datetime
 import os
+import sys
 
 
 REPO_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -22,7 +23,7 @@ def install(install_dir, shell_file):
 
     if not os.path.isdir(install_dir):
         print('install directory %s does not exist. exiting' % install_dir)
-        import sys; sys.exit(1)
+        sys.exit(1)
 
     install_dir = os.path.realpath(install_dir)
     shell_file = os.path.join(install_dir, shell_file)
