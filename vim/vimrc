@@ -5,13 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-Plugin 'vim-syntastic/syntastic'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
