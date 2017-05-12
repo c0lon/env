@@ -12,6 +12,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-fugitive'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 
@@ -19,8 +20,8 @@ set encoding=utf-8
 set ffs=unix,dos,mac
 
 " custom commands
-:command Tests :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
-:command Skiptests :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
+:command Tenable :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
+:command Tdisable :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
 
 " how many commands vim should remember
 set history=500
@@ -97,7 +98,7 @@ set wrap
 
 " code folding
 set foldmethod=indent
-set foldnestmax=10
+set foldnestmax=2
 set nofoldenable
 set foldlevel=99
 
@@ -113,8 +114,8 @@ map <space> /
 map <c-space> ?
 
 " status line
-set laststatus=2
-set statusline=\ %n\ %f\ %=%l/%L,\ %v
+"set laststatus=2
+"set statusline=\ %n\ %f\ %=%l/%L,\ %v
 
 " splits
 nnoremap <C-K> <C-W><C-K>
