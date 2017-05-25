@@ -10,7 +10,7 @@ VIM_DIR_PATH = os.path.join(REPO_DIR, 'vim')
 VIMRC_PATH = os.path.join(VIM_DIR_PATH, 'vimrc')
 TMUX_PATH = os.path.join(REPO_DIR, 'tmux.conf')
 
-VUNDLE_REPO = 'https://github.com/VundleVim.vim.git'
+VUNDLE_REPO = 'https://github.com/VundleVim/Vundle.vim.git'
 PYENV_REPO = 'https://github.com/yyuu/pyenv.git'
 PYENV_VIRTUALENV_REPO = 'https://github.com/yyuu/pyenv-virtualenv.git'
 
