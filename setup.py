@@ -28,7 +28,7 @@ PYENV_VIRTUALENV_REPO = 'https://github.com/yyuu/pyenv-virtualenv.git'
 def configure_shell_file(install_dir, shell_file):
     with open(shell_file, 'a') as f:
         # install terminal prompt (PS1)
-        f.write('\nPS1={}\n'.format(PS1))
+        f.write('\nPS1="{}"\n'.format(PS1))
 
         # install aliases
         for alias_type, aliases in ALIASES.items():
