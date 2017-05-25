@@ -34,7 +34,7 @@ def configure_shell_file(install_dir, shell_file):
         for alias_type, aliases in ALIASES.items():
             f.write('\n# {} aliases\n'.format(alias_type))
             for alias in aliases:
-                f.write('{}\n'.format(alias))
+                f.write('alias {}\n'.format(alias))
 
 
 def install_vim(install_dir, shell_file):
