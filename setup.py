@@ -89,7 +89,6 @@ def install(install_dir, shell_file):
 
 
 if __name__ == '__main__':
-    import sys; sys.exit(0)
     arg_parser = ArgumentParser()
     arg_parser.add_argument('-i', '--install-dir', type=str,
         help='specify the install directory')
