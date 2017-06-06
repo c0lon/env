@@ -1,0 +1,14 @@
+{
+  "common": [
+    "rst=\"exec $SHELL; reset\""
+  ],
+  "git": [
+    "gst=\"git status\"",
+    "gdf=\"git diff -w \"",
+    "gad=\"git add -all .\"",
+    "gc=\"git commit\""
+  ],
+  "python": [
+    "psd=\"python setup.py develop\""
+  ]
+}

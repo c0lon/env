@@ -1,24 +1,20 @@
 #!/usr/bin/env python
 from argparse import ArgumentParser
 from datetime import datetime
+import json
 import os
 import sys
 
 
-REPO_DIR = os.path.dirname(os.path.realpath(__file__))
-VIM_DIR_PATH = os.path.join(REPO_DIR, 'vim')
+here = os.path.dirname(os.path.realpath(__file__))
+ALIAS_PATH = os.path.join(here, 'aliases.json')
+VIM_DIR_PATH = os.path.join(here, 'vim')
 VIMRC_PATH = os.path.join(VIM_DIR_PATH, 'vimrc')
-TMUX_PATH = os.path.join(REPO_DIR, 'tmux.conf')
+TMUX_PATH = os.path.join(here, 'tmux.conf')
 
-PS1 = '\[\033[1;34m\]\u\[\033[1;36m\]@\[\033[1;35m\]\W\[\033[1;32m\] $ \[\033[0m\]'
-ALIASES = {
-    'common' : [
-        'rst="exec $SHELL; reset"',
-    ],
-    'git' : [
-        'gst="git status"',
-    ]
-}
+PS1 = '\\[\033[1;34m\\]\\u\\[\033[1;36m\\]@\\[\033[1;35m\\]\\W\\[\033[1;32m\\] $ \\[\033[0m\\]'
+with open(ALIAS_PATH) as f:
+    ALIASES = json.load(f)
 
 VUNDLE_REPO = 'https://github.com/VundleVim/Vundle.vim.git'
 PYENV_REPO = 'https://github.com/yyuu/pyenv.git'
@@ -93,6 +89,7 @@ def install(install_dir, shell_file):
 
 
 if __name__ == '__main__':
+    import sys; sys.exit(0)
     arg_parser = ArgumentParser()
     arg_parser.add_argument('-i', '--install-dir', type=str,
         help='specify the install directory')
