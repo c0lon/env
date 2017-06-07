@@ -9,6 +9,7 @@
     "gc=\"git commit\""
   ],
   "python": [
-    "psd=\"python setup.py develop\""
+    "psd=\"python setup.py develop\"",
+    "pua=\"pip freeze | xargs pip uninstall -y\""
   ]
 }
