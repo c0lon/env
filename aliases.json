@@ -6,7 +6,8 @@
     "gst=\"git status\"",
     "gdf=\"git diff -w \"",
     "gad=\"git add -all .\"",
-    "gc=\"git commit\""
+    "gc=\"git commit\"",
+    "gcm=\"git commit -m \""
   ],
   "python": [
     "psd=\"python setup.py develop\"",
