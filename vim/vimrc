@@ -25,7 +25,7 @@ set ffs=unix,dos,mac
 :command Tdisable :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
 
 " custom macros
-let @c = "oimport code; code.interact(local=locals())"
+let @c = "oimport code; code.interact(local=locals())"
 
 " how many commands vim should remember
 set history=500
