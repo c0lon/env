@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+''' TODO
+add a way to update the shell file instead of overwriting it
+'''
+
+
 from argparse import ArgumentParser
 from datetime import datetime
 import json
