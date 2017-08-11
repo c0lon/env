@@ -4,8 +4,8 @@ set encoding=utf-8
 set ffs=unix,dos,mac
 
 " custom commands
-:command Tests :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
-:command Skiptests :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
+:command Te :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
+:command Ste :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
 
 " how many commands vim should remember
 set history=500
@@ -65,7 +65,7 @@ set noswapfile
 
 " line numbers
 set number
-set relativenumber
+"set relativenumber
 
 " tab stuff
 set tabstop=4
