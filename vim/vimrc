@@ -83,6 +83,7 @@ set noswapfile
 
 " line numbers
 set number
+"set relativenumber
 
 " tab stuff
 set tabstop=4
