@@ -1,0 +1,19 @@
+{
+  "common": [
+    "rst=\"exec $SHELL; reset\""
+  ],
+  "git": [
+    "gst=\"git status\"",
+    "gdf=\"git diff -w \"",
+    "gad=\"git add -all .\"",
+    "gc=\"git commit\"",
+    "gcm=\"git commit -m \"",
+    "gsn=\"git shortlog -sn\""
+  ],
+  "python": [
+    "psd=\"python setup.py develop\"",
+    "pua=\"pip freeze | xargs pip uninstall -y\"",
+    "psrvd=\"pserve --reload development.ini\"",
+    "phs=\"python -m http.server \""
+  ]
+}

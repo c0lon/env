@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/cbarth/Documents/projects/ip_importer/email'
-let g:netrw_dirhist_2='/Users/cbarth/Documents/projects/query-builder/src/components/content'

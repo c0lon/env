@@ -1,24 +1,48 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
 
 set encoding=utf-8
 set ffs=unix,dos,mac
 
 " custom commands
+<<<<<<< HEAD
 :command Te :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
 :command Ste :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
+=======
+:command Tenable :%s/^@pytest\.mark\.skip/#@pytest\.mark\.skip/g
+:command Tdisable :%s/#@pytest\.mark\.skip/@pytest\.mark\.skip/g
+
+" custom macros
+let @c = "oimport pdb; pdb.set_trace()"
+>>>>>>> c0be8cd9b6175c0b3e67787198e6eda8809a72d5
 
 " how many commands vim should remember
 set history=500
 
 " filetype plugins
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " refresh a file automatically when it changes outside of vim
 set autoread
 
 " keep lines above/below the cursor
-set so=7
+set so=3
 
 " list items in context menus
 set wildmenu
@@ -83,7 +107,7 @@ set wrap
 
 " code folding
 set foldmethod=indent
-set foldnestmax=10
+set foldnestmax=2
 set nofoldenable
 set foldlevel=99
 
@@ -99,8 +123,8 @@ map <space> /
 map <c-space> ?
 
 " status line
-set laststatus=2
-set statusline=\ %n\ %f\ %=%l/%L,\ %v
+"set laststatus=2
+"set statusline=\ %n\ %f\ %=%l/%L,\ %v
 
 " splits
 nnoremap <C-K> <C-W><C-K>
