@@ -1,19 +1,18 @@
 set nocompatible
 filetype off
+set laststatus=2
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 
@@ -84,7 +83,6 @@ set noswapfile
 
 " line numbers
 set number
-set relativenumber
 
 " tab stuff
 set tabstop=4
@@ -117,10 +115,6 @@ nmap <CR> o<Esc>
 map <space> /
 map <c-space> ?
 
-" status line
-"set laststatus=2
-"set statusline=\ %n\ %f\ %=%l/%L,\ %v
-
 " splits
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-J> <C-W><C-J>
@@ -132,10 +126,6 @@ map <Left> :vertical resize -1<CR>
 map <Right> :vertical resize +1<CR>
 set splitbelow
 set splitright
-
-" refresh file + jump to last line
-" for log files
-map K :e<Return>G
 
 " nerdtree
 nmap <silent> <C-N> :NERDTreeToggle<CR>
