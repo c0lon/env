@@ -1,0 +1,25 @@
+# http://editorconfig.org
+
+root = true
+
+# unix style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# set default charset
+[*.{py, js}]
+charset = utf-8
+
+# indentation settings for python
+[*.py]
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+# indentation settings for data files
+[*.{md, json, yml, yaml}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+
