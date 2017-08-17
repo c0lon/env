@@ -11,7 +11,7 @@ import os
 import sys
 
 
-here = os.path.dirname(os.path.realpath(__file__))
+here = os.path.abspath(os.path.dirname(__file__))
 ALIAS_PATH = os.path.join(here, 'aliases.json')
 EDITOR_CONFIG_PATH = os.path.join(here, 'editorconfig')
 VIM_DIR_PATH = os.path.join(here, 'vim')
