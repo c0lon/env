@@ -12,6 +12,7 @@
   ],
   "python": [
     "psd=\"python setup.py develop\"",
+    "psi=\"python setup.py install\"",
     "pua=\"pip freeze | xargs pip uninstall -y\"",
     "psrvd=\"pserve --reload development.ini\"",
     "phs=\"python -m http.server \""
