@@ -13,6 +13,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tomlion/vim-solidity'
 
 call vundle#end()
 
