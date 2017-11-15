@@ -9,7 +9,6 @@
     "gc=\"git commit\"",
     "gcm=\"git commit -m \"",
     "gsn=\"git shortlog -sn\"",
-    "gdp=\"git commit -m \"docs: enhance\" && git push"
   ],
   "python": [
     "psd=\"python setup.py develop\"",
