@@ -8,7 +8,7 @@
     "gad=\"git add -all .\"",
     "gc=\"git commit\"",
     "gcm=\"git commit -m \"",
-    "gsn=\"git shortlog -sn\"",
+    "gsn=\"git shortlog -sn\""
   ],
   "python": [
     "psd=\"python setup.py develop\"",
