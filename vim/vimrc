@@ -102,9 +102,9 @@ set wrap
 
 " code folding
 set foldmethod=indent
-set foldnestmax=2
-set nofoldenable
 set foldlevel=99
+" fold/unfold with space
+nnoremap <space> za
 
 " treat long lines as break lines
 map j gj
@@ -112,10 +112,6 @@ map k gk
 
 " insert newline without entering edit mode
 nmap <CR> o<Esc>
-
-" map <space>/<c-space> to search/reverse search
-map <space> /
-map <c-space> ?
 
 " splits
 nnoremap <C-K> <C-W><C-K>
