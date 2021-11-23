@@ -4,10 +4,10 @@
 SHELL="bash"
 
 if [ $SHELL == "bash" ]; then
-    cp "$PWD/.bashrc" "$HOME/.bashrc"
+    cp "$PWD/shells/bashrc" "$HOME/.bashrc"
 fi
 
-cp "$PWD/.vimrc" "$HOME/.vimrc"
+cp "$PWD/vimrc" "$HOME/.vimrc"
 
 exec $SHELL
 reset
